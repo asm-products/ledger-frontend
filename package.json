@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "express": "^4.10.0",
+    "morgan": "^1.5.0",
+    "react-tools": "^0.12.0"
+  },
+  "description": "Watch your money fly away.",
+  "devDependencies": {
+    "bower": "^1.3.0",
+    "cogs": "^0.26.0",
+    "csso": "^1.3.0",
+    "es6-module-transpiler": "^0.4.0",
+    "jsxhint": "^0.8.0",
+    "less": "^2.1.0",
+    "uglify-js": "^2.4.0"
+  },
+  "engines": {
+    "node": "^0.10.0"
+  },
+  "main": "server.js",
+  "name": "ledger-react",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tfausak/ledger-react"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "0.3.0"
+}
