@@ -21,20 +21,20 @@ export default React.createClass({
           onUpdateEntry={this.updateEntry}
           onDeleteEntry={this.deleteEntry} />
         <Footer
-          backEndVersion={this.state.backEndVersion}
-          frontEndVersion={this.state.frontEndVersion} />
+          backendVersion={this.state.backendVersion}
+          frontendVersion={this.state.frontendVersion} />
       </div>
     );
   },
 
   getInitialState: function () {
     return {
-      backEndVersion: undefined,
-      backEndURL: window.LEDGER_API_URL,
+      backendVersion: undefined,
+      backendURL: window.LEDGER_BACKEND_URL,
       // disconnected, connecting, connected
       connectionStatus: 'disconnected',
       entries: [],
-      frontEndVersion: window.LEDGER_REACT_VERSION,
+      frontendVersion: window.LEDGER_FRONTEND_VERSION,
       key: window.localStorage.getItem('key'),
       // missing, invalid, valid
       keyStatus: 'missing'
@@ -58,14 +58,14 @@ export default React.createClass({
       if (response && response.status === 200) {
         timeout = 5000;
         this.setState({
-          backEndVersion: response.body.version,
+          backendVersion: response.body.version,
           connectionStatus: 'connected'
         });
         this.updateKeyStatus();
       } else {
         timeout = 1000;
         this.setState({
-          backEndVersion: undefined,
+          backendVersion: undefined,
           connectionStatus: 'disconnected'
         });
       }
@@ -91,7 +91,7 @@ export default React.createClass({
   },
 
   buildUrl: function (path) {
-    var url = this.state.backEndURL + '/' + path;
+    var url = this.state.backendURL + '/' + path;
     if (this.state.key) { url += '?key=' + this.state.key; }
     return url;
   },

@@ -2,8 +2,8 @@ import React from 'react';
 
 export default React.createClass({
   propTypes: {
-    backEndVersion: React.PropTypes.string,
-    frontEndVersion: React.PropTypes.string.isRequired
+    backendVersion: React.PropTypes.string,
+    frontendVersion: React.PropTypes.string.isRequired
   },
 
   render: function () {
@@ -11,28 +11,28 @@ export default React.createClass({
       <div className="container">
         <ul className="list-inline text-center">
           <li>
-            <a href="https://github.com/tfausak/ledger-react">
-              ledger-react
+            <a href="https://github.com/asm-products/ledger-frontend">
+              ledger-frontend
             </a>
-            {' ' + this.frontEndVersion()}
+            {' ' + this.frontendVersion()}
           </li>
 
           <li>
-            <a href="https://github.com/tfausak/ledger-api">
-              ledger-api
+            <a href="https://github.com/asm-products/ledger-backend">
+              ledger-backend
             </a>
-            {' ' + this.backEndVersion()}
+            {' ' + this.backendVersion()}
           </li>
         </ul>
       </div>
     );
   },
 
-  backEndVersion: function () {
-    return this.props.backEndVersion || 'unknown';
+  backendVersion: function () {
+    return this.props.backendVersion || 'unknown';
   },
 
-  frontEndVersion: function () {
-    return this.props.frontEndVersion;
+  frontendVersion: function () {
+    return this.props.frontendVersion;
   }
 });

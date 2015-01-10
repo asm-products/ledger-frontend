@@ -18,11 +18,11 @@
     "node": "^0.10.0"
   },
   "main": "server.js",
-  "name": "ledger-react",
+  "name": "ledger-frontend",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/tfausak/ledger-react"
+    "url": "https://github.com/asm-products/ledger-frontend"
   },
   "scripts": {
     "start": "node server.js"

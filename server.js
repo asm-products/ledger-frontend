@@ -5,7 +5,7 @@ var package = require('./package.json');
 
 var host = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 var port = process.env.OPENSHIFT_NODEJS_PORT || 8000;
-var url = process.env.LEDGER_API_URL || 'http://localhost:3000';
+var url = process.env.LEDGER_BACKEND_URL || 'http://localhost:3000';
 var version = package.version;
 
 var server = express();
@@ -21,8 +21,8 @@ server.get('/', function (request, response) {
         response.status(500).send();
       } else {
         response.send(data
-          .replace('LEDGER_API_URL_PLACEHOLDER', url)
-          .replace('LEDGER_REACT_VERSION_PLACEHOLDER', version));
+          .replace('LEDGER_BACKEND_URL_PLACEHOLDER', url)
+          .replace('LEDGER_FRONTEND_VERSION_PLACEHOLDER', version));
       }
     }
   );
