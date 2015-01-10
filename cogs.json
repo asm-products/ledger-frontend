@@ -1,0 +1,16 @@
+{
+  "options": {
+    "basePath": "src/scripts",
+    "concatAmd": true,
+    "names": {
+      "react": "bower_components/react/react-with-addons.min.js",
+      "superagent": "bower_components/superagent/superagent.js"
+    },
+    "processors.es6.options.compatFix": true,
+    "compressors.js.ignore": ["react"]
+  },
+  "targets": {
+    "src/scripts/index.es6.jsx": "static",
+    "src/styles/index.less": "static"
+  }
+}
