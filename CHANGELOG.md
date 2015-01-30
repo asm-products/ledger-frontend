@@ -2,6 +2,11 @@
 
 This package uses [Semantic Versioning][1].
 
+## v0.3.1 (2015-01-30)
+
+- Renamed project from tfausak/ledger-react to
+  asm-products/ledger-frontend.
+
 ## v0.3.0 (2014-12-25)
 
 - Completely reworked the front end.
